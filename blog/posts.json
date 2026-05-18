@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Norsk arbeidsmarkedsoversikt",
+    "slug": "norsk-arbeidsmarkedsoversikt",
+    "date": "2026-05-07",
+    "url": "/blog/innlegg/norsk-arbeidsmarkedsoversikt.html",
+    "summary": "En oppdatert analyse av trender, kompetansegap og muligheter i det norske arbeidsmarkedet.",
+    "tags": ["SSB", "arbeidsmarked", "KI"]
+  },
+  {
+    "title": "KI-påvirkning i norske yrker",
+    "slug": "ki-anslag-og-sporsmal",
+    "date": "2026-05-07",
+    "url": "/blog/innlegg/ki-anslag-og-sporsmal.html",
+    "summary": "Hvordan kunstig intelligens påvirker yrker og kompetansekrav i Norge, nå og fremover.",
+    "tags": ["KI", "arbeidsliv", "analyse"]
+  },
+  {
+    "title": "Hvordan visualisere KI-påvirkning uten hype?",
+    "slug": "reddit-ama-arbeidsmarked",
+    "date": "2026-05-07",
+    "url": "/blog/innlegg/reddit-ama-arbeidsmarked.html",
+    "summary": "En praktisk diskusjon om data, usikkerhet og bedre spørsmål til norsk arbeidsliv.",
+    "tags": ["data", "usikkerhet", "arbeidsmarked"]
+  }
+]
