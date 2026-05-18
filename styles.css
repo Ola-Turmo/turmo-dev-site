@@ -1,12 +1,12 @@
 :root {
-  --color-background: #070707;
-  --color-coal: #111111;
+  --color-background: #060504;
+  --color-coal: #0d0c0b;
   --color-bronze: #b98a5a;
   --color-bronze-hover: #c99a68;
-  --color-ivory: #f2e9de;
-  --color-soft-gray: #a8a19a;
+  --color-ivory: #f4eadf;
+  --color-soft-gray: #b8aea4;
   --color-muted: #746d66;
-  --color-line: #2a2521;
+  --color-line: #2c241e;
   --color-line-light: rgba(242, 233, 222, 0.12);
   --color-bronze-transparent: rgba(185, 138, 90, 0.18);
   --font-heading: "Playfair Display", Georgia, "Times New Roman", serif;
@@ -29,8 +29,8 @@ html {
 body {
   margin: 0;
   background:
-    radial-gradient(circle at 78% 0%, rgba(185, 138, 90, 0.1), transparent 34rem),
-    linear-gradient(180deg, #080706 0%, var(--color-background) 42rem);
+    radial-gradient(circle at 78% 0%, rgba(185, 138, 90, 0.08), transparent 34rem),
+    linear-gradient(180deg, #070605 0%, var(--color-background) 42rem);
   color: var(--color-ivory);
   font-family: var(--font-body);
   line-height: 1.65;
@@ -58,6 +58,18 @@ button:focus-visible {
   margin-inline: auto;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
 .divider {
   border-top: 1px solid rgba(185, 138, 90, 0.22);
 }
@@ -70,7 +82,7 @@ button:focus-visible {
   align-items: flex-start;
   justify-content: space-between;
   gap: 32px;
-  width: min(1320px, calc(100% - 64px));
+  width: min(1210px, calc(100% - 72px));
   margin: 0 auto;
   padding: 42px 0 0;
 }
@@ -85,7 +97,7 @@ button:focus-visible {
 .brand__name {
   color: var(--color-ivory);
   font-family: var(--font-heading);
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(1.8rem, 2.6vw, 2.45rem);
   font-weight: 500;
   letter-spacing: 0;
   line-height: 0.92;
@@ -93,7 +105,7 @@ button:focus-visible {
 
 .brand__sub {
   color: var(--color-bronze);
-  font-size: 0.72rem;
+  font-size: 0.66rem;
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -103,7 +115,7 @@ button:focus-visible {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  gap: clamp(18px, 2.4vw, 34px);
+  gap: clamp(18px, 2.3vw, 32px);
   padding-top: 14px;
 }
 
@@ -125,10 +137,10 @@ button:focus-visible {
 
 .hero {
   position: relative;
-  min-height: 760px;
+  min-height: 628px;
   overflow: clip;
   border-bottom: 1px solid rgba(185, 138, 90, 0.22);
-  background: #070707;
+  background: #060504;
 }
 
 .hero::before {
@@ -137,8 +149,8 @@ button:focus-visible {
   inset: 0;
   z-index: 2;
   background:
-    linear-gradient(90deg, rgba(7, 7, 7, 0.99) 0%, rgba(7, 7, 7, 0.9) 38%, rgba(7, 7, 7, 0.18) 68%, rgba(7, 7, 7, 0.68) 100%),
-    linear-gradient(180deg, rgba(7, 7, 7, 0.1) 0%, rgba(7, 7, 7, 0.08) 55%, rgba(7, 7, 7, 0.96) 100%);
+    linear-gradient(90deg, rgba(6, 5, 4, 0.99) 0%, rgba(6, 5, 4, 0.9) 34%, rgba(6, 5, 4, 0.34) 58%, rgba(6, 5, 4, 0.48) 100%),
+    linear-gradient(180deg, rgba(6, 5, 4, 0.06) 0%, rgba(6, 5, 4, 0.05) 56%, rgba(6, 5, 4, 0.98) 100%);
   pointer-events: none;
 }
 
@@ -147,25 +159,26 @@ button:focus-visible {
   inset: 0;
   z-index: 1;
   background:
-    radial-gradient(circle at 79% 29%, rgba(185, 138, 90, 0.22), transparent 17rem),
-    linear-gradient(90deg, #070707 0%, #0a0908 44%, #18120e 100%),
-    #070707;
+    radial-gradient(circle at 80% 29%, rgba(185, 138, 90, 0.18), transparent 17rem),
+    linear-gradient(90deg, #060504 0%, #090807 42%, #1d130e 100%),
+    #060504;
 }
 
 .hero__scene {
   position: absolute;
   inset: 0 0 0 42%;
   background:
-    linear-gradient(90deg, #070707 0%, rgba(7, 7, 7, 0.62) 24%, rgba(7, 7, 7, 0.04) 58%, rgba(7, 7, 7, 0.28) 100%),
-    radial-gradient(circle at 82% 46%, rgba(219, 151, 82, 0.34) 0 0.32rem, transparent 0.36rem),
-    radial-gradient(circle at 88% 51%, rgba(219, 151, 82, 0.28) 0 0.24rem, transparent 0.28rem),
-    radial-gradient(circle at 72% 58%, rgba(219, 151, 82, 0.26) 0 0.2rem, transparent 0.24rem),
-    linear-gradient(90deg, rgba(242, 233, 222, 0.09) 0 1px, transparent 1px 132px),
-    linear-gradient(180deg, transparent 0 58%, rgba(185, 138, 90, 0.1) 58.2%, transparent 58.7%),
-    linear-gradient(135deg, rgba(242, 233, 222, 0.04), transparent 36%),
-    linear-gradient(90deg, #0a0b0a, #17110d 52%, #2a160c);
+    linear-gradient(90deg, #060504 0%, rgba(6, 5, 4, 0.7) 23%, rgba(6, 5, 4, 0.08) 58%, rgba(6, 5, 4, 0.3) 100%),
+    radial-gradient(circle at 84% 41%, rgba(224, 156, 83, 0.42) 0 0.28rem, transparent 0.34rem),
+    radial-gradient(circle at 89% 48%, rgba(224, 156, 83, 0.32) 0 0.2rem, transparent 0.27rem),
+    radial-gradient(circle at 74% 55%, rgba(224, 156, 83, 0.28) 0 0.18rem, transparent 0.24rem),
+    radial-gradient(ellipse at 70% 72%, rgba(185, 138, 90, 0.16), transparent 18rem),
+    linear-gradient(90deg, rgba(244, 234, 223, 0.08) 0 1px, transparent 1px 122px),
+    linear-gradient(180deg, transparent 0 59%, rgba(185, 138, 90, 0.11) 59.2%, transparent 59.8%),
+    linear-gradient(135deg, rgba(244, 234, 223, 0.04), transparent 36%),
+    linear-gradient(90deg, #080908, #15100d 52%, #29160c);
   opacity: 0.86;
-  filter: saturate(0.82) contrast(1.08);
+  filter: saturate(0.84) contrast(1.08);
 }
 
 .hero__scene::before {
@@ -173,7 +186,7 @@ button:focus-visible {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(242, 233, 222, 0.08) 0 1px, transparent 1px 100%) 8% 0 / 14% 100%,
+    linear-gradient(90deg, rgba(244, 234, 223, 0.08) 0 1px, transparent 1px 100%) 8% 0 / 14% 100%,
     linear-gradient(180deg, transparent 0 66%, rgba(185, 138, 90, 0.1) 66.2%, transparent 66.7%),
     radial-gradient(ellipse at 62% 73%, rgba(185, 138, 90, 0.16), transparent 19rem);
   opacity: 0.64;
@@ -181,16 +194,16 @@ button:focus-visible {
 
 .hero__portrait {
   position: absolute;
-  right: min(11vw, 150px);
+  right: min(10vw, 128px);
   bottom: 0;
-  width: min(34vw, 500px);
-  max-height: 86%;
+  width: min(27vw, 365px);
+  max-height: 74%;
   border: 0;
   border-radius: 0;
   object-fit: cover;
   object-position: center bottom;
   opacity: 1;
-  filter: grayscale(0.08) saturate(0.72) contrast(1.14) brightness(0.88);
+  filter: grayscale(0.05) saturate(0.7) contrast(1.12) brightness(0.9);
   box-shadow: none;
   mix-blend-mode: luminosity;
 }
@@ -198,10 +211,10 @@ button:focus-visible {
 .hero__visual::after {
   content: "";
   position: absolute;
-  right: min(3vw, 44px);
+  right: min(4vw, 52px);
   bottom: 0;
-  width: min(44vw, 620px);
-  height: min(70vh, 660px);
+  width: min(42vw, 600px);
+  height: min(58vh, 560px);
   background:
     radial-gradient(ellipse at 50% 38%, transparent 0 21%, rgba(7, 7, 7, 0.2) 45%, rgba(7, 7, 7, 0.88) 78%),
     linear-gradient(90deg, transparent, rgba(7, 7, 7, 0.78) 86%);
@@ -212,15 +225,12 @@ button:focus-visible {
 .hero__inner {
   position: relative;
   z-index: 3;
-  display: grid;
-  grid-template-columns: 0.95fr 1.05fr;
-  min-height: 760px;
-  align-items: center;
+  min-height: 628px;
+  padding-top: 150px;
 }
 
 .hero__copy {
-  max-width: 650px;
-  padding-top: 76px;
+  max-width: 930px;
 }
 
 .section-label {
@@ -244,8 +254,8 @@ h3 {
 }
 
 h1 {
-  font-size: clamp(3.3rem, 7vw, 6.4rem);
-  line-height: 0.98;
+  font-size: clamp(3rem, 4.75vw, 4.45rem);
+  line-height: 1.04;
 }
 
 h1 span,
@@ -256,7 +266,7 @@ h1 span,
 
 h2 {
   max-width: 680px;
-  font-size: clamp(2.1rem, 4vw, 3.1rem);
+  font-size: clamp(1.85rem, 3vw, 2.25rem);
   line-height: 1.12;
 }
 
@@ -272,9 +282,9 @@ p {
 
 .hero__lead {
   max-width: 440px;
-  margin-top: 26px;
-  color: rgba(242, 233, 222, 0.82);
-  font-size: clamp(1.08rem, 2vw, 1.35rem);
+  margin-top: 28px;
+  color: rgba(244, 234, 223, 0.82);
+  font-size: clamp(1.05rem, 1.55vw, 1.24rem);
   line-height: 1.55;
 }
 
@@ -290,11 +300,11 @@ p {
   align-items: center;
   justify-content: center;
   min-height: 48px;
-  padding: 0 24px;
+  padding: 0 26px;
   border: 1px solid;
   font-size: 0.9rem;
   font-weight: 500;
-  letter-spacing: 0.02em;
+  letter-spacing: 0;
   text-decoration: none;
   transition: background 160ms ease, border-color 160ms ease, color 160ms ease, transform 160ms ease;
 }
@@ -315,8 +325,8 @@ p {
 }
 
 .button-secondary {
-  border-color: rgba(242, 233, 222, 0.28);
-  background: rgba(7, 7, 7, 0.2);
+  border-color: rgba(244, 234, 223, 0.28);
+  background: rgba(6, 5, 4, 0.2);
   color: var(--color-ivory);
 }
 
@@ -328,7 +338,7 @@ p {
 .projects,
 .journal,
 .about {
-  padding: clamp(68px, 9vw, 108px) 0;
+  padding: clamp(62px, 8vw, 96px) 0;
 }
 
 .method h2 {
@@ -419,11 +429,11 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 250px;
+  min-height: 238px;
   overflow: hidden;
   padding: clamp(28px, 4vw, 44px);
   border: 1px solid var(--color-line);
-  background: #0d0d0c;
+  background: #0c0b0a;
   isolation: isolate;
 }
 
@@ -449,12 +459,12 @@ p {
 }
 
 .project--large {
-  min-height: 460px;
+  min-height: 438px;
 }
 
 .project--large h3 {
-  margin-top: 86px;
-  font-size: clamp(2.6rem, 5.2vw, 4.6rem);
+  margin-top: 84px;
+  font-size: clamp(2.15rem, 4vw, 3.25rem);
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
@@ -527,7 +537,7 @@ p {
   align-items: end;
   justify-content: space-between;
   gap: 32px;
-  margin-bottom: 42px;
+  margin-bottom: 28px;
 }
 
 .journal__list {
@@ -536,7 +546,7 @@ p {
 }
 
 .journal__list article {
-  min-height: 220px;
+  min-height: 186px;
   padding-right: 42px;
 }
 
@@ -560,8 +570,7 @@ p {
 }
 
 .journal__list p {
-  max-width: 330px;
-  margin: 18px 0 22px;
+  display: none;
 }
 
 .about__inner {
@@ -572,7 +581,7 @@ p {
 
 .about p:last-child {
   max-width: 760px;
-  color: rgba(242, 233, 222, 0.78);
+  color: rgba(244, 234, 223, 0.78);
   font-size: clamp(1.15rem, 2vw, 1.45rem);
   line-height: 1.65;
 }
@@ -826,6 +835,10 @@ p {
 
   .hero__copy {
     padding-top: 34px;
+  }
+
+  .hero__portrait {
+    opacity: 0.1;
   }
 
   .hero__actions,
