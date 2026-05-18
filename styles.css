@@ -149,7 +149,7 @@ button:focus-visible {
   inset: 0;
   z-index: 2;
   background:
-    linear-gradient(90deg, rgba(6, 5, 4, 0.99) 0%, rgba(6, 5, 4, 0.9) 34%, rgba(6, 5, 4, 0.34) 58%, rgba(6, 5, 4, 0.48) 100%),
+    linear-gradient(90deg, rgba(6, 5, 4, 0.98) 0%, rgba(6, 5, 4, 0.82) 35%, rgba(6, 5, 4, 0.2) 61%, rgba(6, 5, 4, 0.18) 100%),
     linear-gradient(180deg, rgba(6, 5, 4, 0.06) 0%, rgba(6, 5, 4, 0.05) 56%, rgba(6, 5, 4, 0.98) 100%);
   pointer-events: none;
 }
@@ -159,26 +159,18 @@ button:focus-visible {
   inset: 0;
   z-index: 1;
   background:
-    radial-gradient(circle at 80% 29%, rgba(185, 138, 90, 0.18), transparent 17rem),
-    linear-gradient(90deg, #060504 0%, #090807 42%, #1d130e 100%),
+    linear-gradient(90deg, rgba(6, 5, 4, 0.2), rgba(6, 5, 4, 0.04)),
+    url("assets/hero-executive.webp") 100% 50% / auto 100% no-repeat,
     #060504;
 }
 
 .hero__scene {
   position: absolute;
-  inset: 0 0 0 42%;
+  inset: 0;
   background:
-    linear-gradient(90deg, #060504 0%, rgba(6, 5, 4, 0.7) 23%, rgba(6, 5, 4, 0.08) 58%, rgba(6, 5, 4, 0.3) 100%),
-    radial-gradient(circle at 84% 41%, rgba(224, 156, 83, 0.42) 0 0.28rem, transparent 0.34rem),
-    radial-gradient(circle at 89% 48%, rgba(224, 156, 83, 0.32) 0 0.2rem, transparent 0.27rem),
-    radial-gradient(circle at 74% 55%, rgba(224, 156, 83, 0.28) 0 0.18rem, transparent 0.24rem),
-    radial-gradient(ellipse at 70% 72%, rgba(185, 138, 90, 0.16), transparent 18rem),
-    linear-gradient(90deg, rgba(244, 234, 223, 0.08) 0 1px, transparent 1px 122px),
-    linear-gradient(180deg, transparent 0 59%, rgba(185, 138, 90, 0.11) 59.2%, transparent 59.8%),
-    linear-gradient(135deg, rgba(244, 234, 223, 0.04), transparent 36%),
-    linear-gradient(90deg, #080908, #15100d 52%, #29160c);
-  opacity: 0.86;
-  filter: saturate(0.84) contrast(1.08);
+    linear-gradient(90deg, rgba(6, 5, 4, 0.98) 0%, rgba(6, 5, 4, 0.72) 31%, rgba(6, 5, 4, 0.08) 57%, rgba(6, 5, 4, 0.06) 100%),
+    radial-gradient(ellipse at 74% 70%, rgba(185, 138, 90, 0.1), transparent 18rem);
+  opacity: 1;
 }
 
 .hero__scene::before {
@@ -186,39 +178,18 @@ button:focus-visible {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(244, 234, 223, 0.08) 0 1px, transparent 1px 100%) 8% 0 / 14% 100%,
-    linear-gradient(180deg, transparent 0 66%, rgba(185, 138, 90, 0.1) 66.2%, transparent 66.7%),
-    radial-gradient(ellipse at 62% 73%, rgba(185, 138, 90, 0.16), transparent 19rem);
-  opacity: 0.64;
-}
-
-.hero__portrait {
-  position: absolute;
-  right: min(10vw, 128px);
-  bottom: 0;
-  width: min(27vw, 365px);
-  max-height: 74%;
-  border: 0;
-  border-radius: 0;
-  object-fit: cover;
-  object-position: center bottom;
+    linear-gradient(180deg, rgba(6, 5, 4, 0) 0%, rgba(6, 5, 4, 0) 72%, rgba(6, 5, 4, 0.92) 100%);
   opacity: 1;
-  filter: grayscale(0.05) saturate(0.7) contrast(1.12) brightness(0.9);
-  box-shadow: none;
-  mix-blend-mode: luminosity;
 }
 
 .hero__visual::after {
   content: "";
   position: absolute;
-  right: min(4vw, 52px);
-  bottom: 0;
-  width: min(42vw, 600px);
-  height: min(58vh, 560px);
+  inset: 0;
   background:
-    radial-gradient(ellipse at 50% 38%, transparent 0 21%, rgba(7, 7, 7, 0.2) 45%, rgba(7, 7, 7, 0.88) 78%),
-    linear-gradient(90deg, transparent, rgba(7, 7, 7, 0.78) 86%);
-  opacity: 0.5;
+    radial-gradient(ellipse at 80% 35%, rgba(185, 138, 90, 0.08), transparent 28rem),
+    linear-gradient(180deg, rgba(6, 5, 4, 0) 0%, rgba(6, 5, 4, 0.12) 61%, rgba(6, 5, 4, 0.88) 100%);
+  opacity: 1;
   pointer-events: none;
 }
 
@@ -335,6 +306,7 @@ p {
 }
 
 .method,
+.solutions,
 .projects,
 .journal,
 .about {
@@ -415,6 +387,44 @@ p {
 .text-link:hover {
   color: var(--color-bronze-hover);
   transform: translateX(2px);
+}
+
+.section-copy {
+  max-width: 430px;
+  color: rgba(244, 234, 223, 0.72);
+}
+
+.solution-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 34px;
+}
+
+.solution-card {
+  min-width: 0;
+  border: 1px solid var(--color-line);
+  background: #0a0908;
+}
+
+.solution-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-bottom: 1px solid var(--color-line);
+  filter: saturate(0.86) contrast(1.04) brightness(0.78);
+}
+
+.solution-card div {
+  padding: 26px;
+}
+
+.solution-card h3 {
+  font-size: clamp(1.35rem, 2vw, 1.65rem);
+}
+
+.solution-card p {
+  margin-top: 16px;
 }
 
 .projects__grid {
@@ -530,6 +540,64 @@ p {
   content: "•";
   margin-right: 16px;
   color: var(--color-bronze);
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: 34px;
+  border: 1px solid var(--color-line);
+  background: var(--color-line);
+}
+
+.portfolio-card {
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr);
+  gap: 18px;
+  min-height: 154px;
+  padding: 24px;
+  background: #090807;
+  text-decoration: none;
+  transition: background 160ms ease, transform 160ms ease;
+}
+
+.portfolio-card:hover {
+  background: #11100f;
+}
+
+.portfolio-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border: 1px solid rgba(185, 138, 90, 0.46);
+  color: var(--color-bronze-hover);
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+.portfolio-body {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.portfolio-body strong {
+  color: var(--color-ivory);
+  font-family: var(--font-heading);
+  font-size: 1.45rem;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.portfolio-body span {
+  color: var(--color-soft-gray);
+  font-size: 0.95rem;
+  line-height: 1.55;
 }
 
 .section-head {
@@ -761,24 +829,21 @@ p {
 
   .hero__scene {
     inset: 0;
-    opacity: 0.54;
+    background:
+      linear-gradient(90deg, rgba(6, 5, 4, 0.98) 0%, rgba(6, 5, 4, 0.82) 43%, rgba(6, 5, 4, 0.18) 68%, rgba(6, 5, 4, 0.08) 100%),
+      linear-gradient(180deg, rgba(6, 5, 4, 0.02) 0%, rgba(6, 5, 4, 0.26) 50%, rgba(6, 5, 4, 0.92) 100%);
+    opacity: 1;
   }
 
-  .hero__portrait {
-    right: 4vw;
-    bottom: 44px;
-    width: min(54vw, 330px);
-    opacity: 0.24;
-  }
-
-  .hero__visual::after {
-    right: 6vw;
-    width: 60vw;
-    opacity: 0.28;
+  .hero__visual {
+    background-position: 78% 50%;
+    background-size: auto 100%;
   }
 
   .method__steps,
+  .solution-grid,
   .projects__grid,
+  .portfolio-grid,
   .journal__list,
   .about__inner,
   .blog-grid,
@@ -807,6 +872,10 @@ p {
     flex-direction: column;
   }
 
+  .section-copy {
+    max-width: 680px;
+  }
+
   .article-side {
     position: static;
     padding: 26px 0 0;
@@ -833,12 +902,19 @@ p {
     min-height: 620px;
   }
 
+  .hero__scene {
+    background:
+      linear-gradient(90deg, rgba(6, 5, 4, 0.99) 0%, rgba(6, 5, 4, 0.9) 55%, rgba(6, 5, 4, 0.42) 78%, rgba(6, 5, 4, 0.16) 100%),
+      linear-gradient(180deg, rgba(6, 5, 4, 0.08) 0%, rgba(6, 5, 4, 0.1) 35%, rgba(6, 5, 4, 0.9) 84%, rgba(6, 5, 4, 0.98) 100%);
+  }
+
   .hero__copy {
     padding-top: 34px;
   }
 
-  .hero__portrait {
-    opacity: 0.1;
+  .hero__visual {
+    background-position: 67% 50%;
+    background-size: auto 100%;
   }
 
   .hero__actions,
@@ -853,6 +929,17 @@ p {
   .project--large h3 {
     margin-top: 40px;
     font-size: 2.4rem;
+  }
+
+  .portfolio-card {
+    grid-template-columns: 44px minmax(0, 1fr);
+    gap: 14px;
+    padding: 20px;
+  }
+
+  .portfolio-logo {
+    width: 44px;
+    height: 44px;
   }
 
   .page-shell {
