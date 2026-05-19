@@ -993,34 +993,53 @@ p {
   .site-header {
     width: min(100% - 32px, var(--container-max));
     flex-direction: column;
-    gap: 18px;
+    gap: 16px;
+    padding: 24px 0 18px;
   }
 
   .site-nav {
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    justify-content: start;
     width: 100%;
-    padding-top: 20px;
+    padding-top: 4px;
     padding-bottom: 6px;
-    gap: 12px 14px;
+    gap: 10px 16px;
   }
 
   .site-nav a {
-    font-size: 0.82rem;
+    font-size: 0.78rem;
+  }
+
+  .hero {
+    min-height: 720px;
+    background:
+      linear-gradient(180deg, rgba(6, 5, 4, 0) 0%, rgba(6, 5, 4, 0.1) 42%, rgba(6, 5, 4, 0.94) 68%, #060504 100%),
+      #060504;
+  }
+
+  .hero::before {
+    background:
+      linear-gradient(180deg, rgba(6, 5, 4, 0.02) 0%, rgba(6, 5, 4, 0.04) 40%, rgba(6, 5, 4, 0.86) 68%, #060504 100%),
+      linear-gradient(90deg, rgba(6, 5, 4, 0.78) 0%, rgba(6, 5, 4, 0.24) 52%, rgba(6, 5, 4, 0.02) 100%);
   }
 
   .hero__inner {
-    min-height: 760px;
+    min-height: 720px;
+    padding-top: 0;
+    display: flex;
+    align-items: flex-end;
   }
 
   .hero__scene {
     background:
-      linear-gradient(180deg, rgba(6, 5, 4, 0.08) 0%, rgba(6, 5, 4, 0.24) 34%, rgba(6, 5, 4, 0.82) 68%, rgba(6, 5, 4, 0.98) 100%),
-      linear-gradient(90deg, rgba(6, 5, 4, 0.96) 0%, rgba(6, 5, 4, 0.66) 50%, rgba(6, 5, 4, 0.06) 100%);
+      linear-gradient(180deg, rgba(6, 5, 4, 0.04) 0%, rgba(6, 5, 4, 0.02) 34%, rgba(6, 5, 4, 0.72) 66%, #060504 94%),
+      radial-gradient(ellipse at 70% 18%, rgba(185, 138, 90, 0.14), transparent 13rem);
   }
 
   .hero__copy {
-    max-width: min(100%, 340px);
-    padding-top: 260px;
+    max-width: 100%;
+    padding: 0 0 52px;
     animation: none;
   }
 
@@ -1030,8 +1049,12 @@ p {
   }
 
   .hero__visual {
-    background-position: 68% 0;
-    background-size: auto 58%;
+    inset: 0 0 auto;
+    height: 520px;
+    background:
+      linear-gradient(180deg, rgba(6, 5, 4, 0.08) 0%, rgba(6, 5, 4, 0.02) 46%, rgba(6, 5, 4, 0.96) 100%),
+      url("assets/hero-executive.webp") 62% 0 / auto 100% no-repeat,
+      #060504;
   }
 
   .hero__actions,
@@ -1040,10 +1063,17 @@ p {
   }
 
   .hero h1 {
+    max-width: 350px;
+    font-size: clamp(3rem, 14vw, 4rem);
+    line-height: 0.98;
     text-shadow: 0 2px 18px rgba(0, 0, 0, 0.84);
   }
 
   .hero__lead {
+    max-width: 340px;
+    margin-top: 22px;
+    font-size: 1.02rem;
+    line-height: 1.5;
     color: rgba(244, 234, 223, 0.9);
     text-shadow: 0 1px 14px rgba(0, 0, 0, 0.9);
   }
