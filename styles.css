@@ -94,6 +94,11 @@ button:focus-visible {
   text-decoration: none;
 }
 
+.brand:hover .brand__name,
+.brand:hover .brand__sub {
+  transform: translateX(2px);
+}
+
 .brand__name {
   color: var(--color-ivory);
   font-family: var(--font-heading);
@@ -101,6 +106,7 @@ button:focus-visible {
   font-weight: 500;
   letter-spacing: 0;
   line-height: 0.92;
+  transition: color 180ms ease, transform 180ms ease;
 }
 
 .brand__sub {
@@ -109,6 +115,7 @@ button:focus-visible {
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
+  transition: color 180ms ease, transform 180ms ease;
 }
 
 .site-nav {
@@ -122,6 +129,7 @@ button:focus-visible {
 .site-nav a,
 .footer__links a,
 .footer__bottom a {
+  position: relative;
   color: var(--color-ivory);
   font-size: 0.88rem;
   font-weight: 500;
@@ -129,10 +137,33 @@ button:focus-visible {
   transition: color 160ms ease;
 }
 
+.site-nav a::after,
+.footer__links a::after,
+.footer__bottom a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -5px;
+  left: 0;
+  height: 1px;
+  background: currentColor;
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
 .site-nav a:hover,
 .footer__links a:hover,
 .footer__bottom a:hover {
   color: var(--color-bronze-hover);
+}
+
+.site-nav a:hover::after,
+.footer__links a:hover::after,
+.footer__bottom a:hover::after {
+  opacity: 0.72;
+  transform: scaleX(1);
 }
 
 .hero {
@@ -193,6 +224,10 @@ button:focus-visible {
   pointer-events: none;
 }
 
+.hero__copy {
+  animation: hero-copy-in 780ms ease-out both;
+}
+
 .hero__inner {
   position: relative;
   z-index: 3;
@@ -212,6 +247,26 @@ button:focus-visible {
   letter-spacing: 0.14em;
   line-height: 1.35;
   text-transform: uppercase;
+}
+
+.section-label::after {
+  content: "";
+  display: inline-block;
+  width: 32px;
+  height: 1px;
+  margin-left: 12px;
+  vertical-align: middle;
+  background: currentColor;
+  opacity: 0.55;
+  transform: scaleX(0.58);
+  transform-origin: left;
+  transition: transform 220ms ease, opacity 220ms ease;
+}
+
+section:hover > .container > .section-label::after,
+.blog-hero:hover .section-label::after {
+  opacity: 0.9;
+  transform: scaleX(1);
 }
 
 h1,
@@ -285,6 +340,17 @@ p {
   transform: translateY(-1px);
 }
 
+.button span[aria-hidden="true"],
+.text-link span[aria-hidden="true"] {
+  display: inline-block;
+  transition: transform 180ms ease;
+}
+
+.button:hover span[aria-hidden="true"],
+.text-link:hover span[aria-hidden="true"] {
+  transform: translateX(4px);
+}
+
 .button-primary {
   border-color: var(--color-bronze);
   background: transparent;
@@ -338,6 +404,11 @@ p {
   position: relative;
   min-height: 280px;
   padding: 24px 44px 0 0;
+  transition: transform 180ms ease;
+}
+
+.method-step:hover {
+  transform: translateY(-3px);
 }
 
 .method-step + .method-step {
@@ -351,6 +422,12 @@ p {
   margin-bottom: 22px;
   color: var(--color-bronze);
   opacity: 0.9;
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.method-step:hover .line-icon {
+  opacity: 1;
+  transform: translateY(-2px) scale(1.04);
 }
 
 .target {
@@ -425,12 +502,13 @@ p {
   background: #0a0908;
   isolation: isolate;
   text-decoration: none;
-  transition: border-color 160ms ease, transform 160ms ease;
+  transition: border-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
 }
 
 .project:hover {
   border-color: rgba(185, 138, 90, 0.52);
-  transform: translateY(-1px);
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.24);
+  transform: translateY(-3px);
 }
 
 .project::before {
@@ -442,6 +520,8 @@ p {
     linear-gradient(90deg, rgba(7, 7, 7, 0.86), rgba(7, 7, 7, 0.56) 54%, rgba(7, 7, 7, 0.18)),
     url("assets/illustrations/document-flow.webp") center / cover no-repeat;
   filter: saturate(0.8) contrast(1.08) brightness(0.74);
+  transform: scale(1.01);
+  transition: filter 260ms ease, transform 260ms ease;
 }
 
 .project::after {
@@ -453,6 +533,16 @@ p {
     radial-gradient(circle at 80% 38%, rgba(185, 138, 90, 0.16), transparent 18rem),
     linear-gradient(180deg, rgba(7, 7, 7, 0.02), rgba(7, 7, 7, 0.58));
   opacity: 0.9;
+  transition: opacity 260ms ease;
+}
+
+.project:hover::before {
+  filter: saturate(0.95) contrast(1.12) brightness(0.82);
+  transform: scale(1.04);
+}
+
+.project:hover::after {
+  opacity: 1;
 }
 
 .project--large {
@@ -515,10 +605,12 @@ p {
 .more-projects a {
   color: var(--color-soft-gray);
   text-decoration: none;
+  transition: color 160ms ease, transform 160ms ease;
 }
 
 .more-projects a:hover {
   color: var(--color-bronze-hover);
+  transform: translateY(-1px);
 }
 
 .more-projects a + a::before {
@@ -543,6 +635,11 @@ p {
 .journal__list article {
   min-height: 186px;
   padding-right: 42px;
+  transition: transform 180ms ease;
+}
+
+.journal__list article:hover {
+  transform: translateY(-3px);
 }
 
 .journal__list article + article {
@@ -653,11 +750,12 @@ p {
   padding: 34px;
   background: #090908;
   text-decoration: none;
-  transition: background 160ms ease;
+  transition: background 160ms ease, transform 160ms ease;
 }
 
 .blog-card:hover {
   background: #11100f;
+  transform: translateY(-3px);
 }
 
 .blog-card p {
@@ -732,6 +830,71 @@ p {
 .article-side a {
   display: block;
   margin-top: 14px;
+}
+
+@keyframes hero-copy-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero__visual {
+    animation: hero-ambient 14s ease-in-out infinite alternate;
+  }
+
+  .line-icon.target {
+    animation: icon-breathe 4.8s ease-in-out infinite;
+  }
+
+  .line-icon.trend {
+    animation: icon-lift 5.4s ease-in-out infinite;
+  }
+}
+
+@keyframes hero-ambient {
+  from {
+    background-position: 0 0, 100% 50%, 0 0;
+  }
+  to {
+    background-position: 0 0, 96% 50%, 0 0;
+  }
+}
+
+@keyframes icon-breathe {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(185, 138, 90, 0);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(185, 138, 90, 0.08);
+  }
+}
+
+@keyframes icon-lift {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 1ms !important;
+  }
 }
 
 @media (max-width: 960px) {
