@@ -369,8 +369,8 @@ function articleHtml(article) {
     <div class="research-shell research-grid">
       <article class="research-body">
         <div class="metric-grid">${metrics(article)}</div>
-        ${sections(article)}
         <div class="chart-grid${article.chartBlocks.length === 1 ? ' chart-grid--single' : ''}">${chartBlocks(article)}</div>
+        ${sections(article)}
         <h2 id="operativ-bruk">Operativ bruk</h2>
         ${table(article)}
         <aside class="takeaway-card">
