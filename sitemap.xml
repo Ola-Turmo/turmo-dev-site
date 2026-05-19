@@ -2,31 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://turmo.dev/</loc>
-    <lastmod>2026-05-18</lastmod>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://turmo.dev/blog/</loc>
-    <lastmod>2026-05-18</lastmod>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://turmo.dev/blog/innlegg/norsk-arbeidsmarkedsoversikt.html</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://turmo.dev/blog/innlegg/norsk-arbeidsmarkedsoversikt</loc>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://turmo.dev/blog/innlegg/ki-anslag-og-sporsmal.html</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://turmo.dev/blog/innlegg/ki-anslag-og-sporsmal</loc>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://turmo.dev/blog/innlegg/reddit-ama-arbeidsmarked.html</loc>
-    <lastmod>2026-05-07</lastmod>
+    <loc>https://turmo.dev/blog/innlegg/reddit-ama-arbeidsmarked</loc>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

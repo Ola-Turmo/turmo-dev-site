@@ -313,6 +313,18 @@ p {
   padding: clamp(62px, 8vw, 96px) 0;
 }
 
+@supports (content-visibility: auto) {
+  .method,
+  .projects,
+  .journal,
+  .about,
+  .site-footer,
+  .blog-grid {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 720px;
+  }
+}
+
 .method h2 {
   margin-bottom: 56px;
 }

@@ -1,0 +1,8 @@
+.git
+.github
+.screenshots
+.wrangler
+node_modules
+*.log
+.env
+blog/README.md

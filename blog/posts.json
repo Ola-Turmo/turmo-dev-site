@@ -3,7 +3,7 @@
     "title": "Norsk arbeidsmarkedsoversikt",
     "slug": "norsk-arbeidsmarkedsoversikt",
     "date": "2026-05-07",
-    "url": "/blog/innlegg/norsk-arbeidsmarkedsoversikt.html",
+    "url": "/blog/innlegg/norsk-arbeidsmarkedsoversikt",
     "summary": "Interaktivt treemap over norske yrker, bygget på SSB-data og STYRK-klassifikasjonen.",
     "tags": ["SSB", "arbeidsmarked", "KI"]
   },
@@ -11,7 +11,7 @@
     "title": "KI-påvirkning i norske yrker",
     "slug": "ki-anslag-og-sporsmal",
     "date": "2026-05-07",
-    "url": "/blog/innlegg/ki-anslag-og-sporsmal.html",
+    "url": "/blog/innlegg/ki-anslag-og-sporsmal",
     "summary": "Radarplot og tabell som viser teoretisk LLM-eksponering mot anslått KI-bruk i norske yrkesgrupper.",
     "tags": ["KI", "arbeidsliv", "analyse"]
   },
@@ -19,7 +19,7 @@
     "title": "Tidslinje for ledende modeller",
     "slug": "reddit-ama-arbeidsmarked",
     "date": "2026-05-07",
-    "url": "/blog/innlegg/reddit-ama-arbeidsmarked.html",
+    "url": "/blog/innlegg/reddit-ama-arbeidsmarked",
     "summary": "Benchmark-graf for frontmodeller på ARC-AGI-2, HLE, HLE-Verified og GPQA Diamond.",
     "tags": ["benchmark", "modeller", "KI"]
   }

@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://turmo.dev/sitemap.xml
+Host: turmo.dev
