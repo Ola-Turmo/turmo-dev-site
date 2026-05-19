@@ -1712,9 +1712,183 @@ body.article-benchmark #aiImpactSection { display: none; }
 body.article-benchmark #introSection { min-height: auto; margin-top: 64px; }
 body.article-benchmark #introSection .intro-head h1 { font-size: 0; }
 body.article-benchmark #introSection .intro-head h1::before { content: "Tidslinje for ledende modeller"; font-size: clamp(2rem, 5vw, 3.3rem); }
+
+
+/* Article chrome and route split */
+.article-shell-header {
+  position: sticky;
+  top: 0;
+  z-index: 80;
+  border-bottom: 1px solid rgba(224, 195, 150, 0.18);
+  background: rgba(10, 10, 15, 0.92);
+  backdrop-filter: blur(18px);
+}
+.article-shell-inner,
+.article-shell-bottom {
+  width: min(1200px, calc(100% - 40px));
+  margin: 0 auto;
+}
+.article-shell-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  padding: 20px 0;
+}
+.article-brand {
+  color: var(--fg);
+  text-decoration: none;
+  line-height: 1;
+}
+.article-brand-name {
+  display: block;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.55rem, 3vw, 2.2rem);
+  letter-spacing: 0;
+}
+.article-brand-sub {
+  display: block;
+  margin-top: 5px;
+  color: var(--accent);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.article-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: clamp(14px, 2vw, 24px);
+}
+.article-nav a,
+.article-footer-links a,
+.article-shell-bottom a {
+  color: rgba(245, 239, 229, 0.82);
+  text-decoration: none;
+}
+.article-nav a {
+  font-size: 0.86rem;
+  font-weight: 600;
+}
+.article-nav a:hover,
+.article-footer-links a:hover,
+.article-shell-bottom a:hover {
+  color: var(--accent);
+}
+.article-shell-footer {
+  margin-top: clamp(56px, 8vw, 96px);
+  border-top: 1px solid rgba(224, 195, 150, 0.16);
+  color: rgba(245, 239, 229, 0.72);
+}
+.article-footer-main {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.8fr) minmax(180px, 1fr) minmax(260px, 1.4fr);
+  gap: 28px;
+  align-items: center;
+  padding: 30px 0 24px;
+}
+.article-footer-main p {
+  margin: 0;
+  color: rgba(245, 239, 229, 0.72);
+  line-height: 1.55;
+}
+.article-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 18px;
+  font-size: 0.86rem;
+}
+.article-shell-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  border-top: 1px solid rgba(224, 195, 150, 0.12);
+  padding: 18px 0 24px;
+  font-size: 0.78rem;
+  color: rgba(245, 239, 229, 0.54);
+}
+.article-shell-bottom div {
+  display: flex;
+  gap: 20px;
+}
+body.article-map .hero,
+body.article-map .thinking-banner,
+body.article-map #aiImpactSection,
+body.article-map #benchmarkSection,
+body.article-ai #header,
+body.article-ai section[aria-labelledby='treemap-heading'],
+body.article-ai #benchmarkSection,
+body.article-benchmark #header,
+body.article-benchmark section[aria-labelledby='treemap-heading'],
+body.article-benchmark #aiImpactSection {
+  display: none !important;
+}
+body.article-map #wrapper,
+body.article-ai #wrapper,
+body.article-benchmark #wrapper {
+  padding-top: clamp(32px, 5vw, 60px);
+  padding-bottom: 0;
+}
+body.article-map #introSection {
+  min-height: auto;
+  margin-top: 0;
+}
+body.article-ai #aiImpactSection,
+body.article-benchmark #benchmarkSection {
+  margin-top: 0;
+}
+body.article-ai .analysis-shell,
+body.article-benchmark .benchmark-shell {
+  margin-top: 0;
+}
+@media (max-width: 820px) {
+  .article-shell-inner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+    padding: 18px 0;
+  }
+  .article-nav {
+    justify-content: flex-start;
+    gap: 12px 18px;
+  }
+  .article-footer-main {
+    grid-template-columns: 1fr;
+  }
+  .article-footer-links {
+    justify-content: flex-start;
+  }
+  .article-shell-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
 </style>
 </head>
 <body class="article-benchmark">
+
+<header class="article-shell-header">
+  <div class="article-shell-inner">
+    <a class="article-brand" href="/" aria-label="turmo.dev forsiden">
+      <span class="article-brand-name">turmo.dev</span>
+      <span class="article-brand-sub">The Executive</span>
+    </a>
+    <nav class="article-nav" aria-label="Hovedmeny">
+      <a href="/#tjenester">Tjenester</a>
+      <a href="/#losninger">Løsninger</a>
+      <a href="/#prosjekter">Prosjekter</a>
+      <a href="/blog/">Journal</a>
+      <a href="/#om">Om oss</a>
+      <a href="/#kontakt">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
 
 <main id="wrapper">
 <header id="header">
@@ -2083,6 +2257,30 @@ Svar kun med JSON:
     </details>
   </div>
 </section>
+
+<footer class="article-shell-footer" id="kontakt">
+  <div class="article-shell-inner article-footer-main">
+    <a class="article-brand" href="/" aria-label="turmo.dev forsiden">
+      <span class="article-brand-name">turmo.dev</span>
+      <span class="article-brand-sub">The Executive</span>
+    </a>
+    <p>Vi integrerer KI.<br>Du skaper verdien.</p>
+    <div class="article-footer-links" aria-label="Sosiale lenker">
+      <a href="https://www.linkedin.com/" rel="noopener">LinkedIn</a>
+      <a href="https://x.com/" rel="noopener">X</a>
+      <a href="https://github.com/Ola-Turmo" rel="noopener">GitHub</a>
+      <a href="https://youtube.com/" rel="noopener">YouTube</a>
+    </div>
+  </div>
+  <div class="article-shell-bottom">
+    <small>© 2026 turmo.dev</small>
+    <div>
+      <a href="mailto:turmoola@gmail.com?subject=Personvern%20turmo.dev">Personvern</a>
+      <a href="mailto:turmoola@gmail.com?subject=Kontakt%20turmo.dev">Kontakt</a>
+    </div>
+  </div>
+</footer>
+
 </main>
 
 <div id="tooltip">
