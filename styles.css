@@ -149,7 +149,7 @@ button:focus-visible {
   inset: 0;
   z-index: 2;
   background:
-    linear-gradient(90deg, rgba(6, 5, 4, 0.98) 0%, rgba(6, 5, 4, 0.82) 35%, rgba(6, 5, 4, 0.2) 61%, rgba(6, 5, 4, 0.18) 100%),
+    linear-gradient(90deg, rgba(6, 5, 4, 0.98) 0%, rgba(6, 5, 4, 0.82) 35%, rgba(6, 5, 4, 0.14) 61%, rgba(6, 5, 4, 0.08) 100%),
     linear-gradient(180deg, rgba(6, 5, 4, 0.06) 0%, rgba(6, 5, 4, 0.05) 56%, rgba(6, 5, 4, 0.98) 100%);
   pointer-events: none;
 }
@@ -168,7 +168,7 @@ button:focus-visible {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(6, 5, 4, 0.98) 0%, rgba(6, 5, 4, 0.72) 31%, rgba(6, 5, 4, 0.08) 57%, rgba(6, 5, 4, 0.06) 100%),
+    linear-gradient(90deg, rgba(6, 5, 4, 0.98) 0%, rgba(6, 5, 4, 0.72) 31%, rgba(6, 5, 4, 0.04) 57%, rgba(6, 5, 4, 0.02) 100%),
     radial-gradient(ellipse at 74% 70%, rgba(185, 138, 90, 0.1), transparent 18rem);
   opacity: 1;
 }
@@ -225,6 +225,7 @@ h3 {
 }
 
 h1 {
+  max-width: 880px;
   font-size: clamp(3rem, 4.75vw, 4.45rem);
   line-height: 1.04;
 }
@@ -306,7 +307,6 @@ p {
 }
 
 .method,
-.solutions,
 .projects,
 .journal,
 .about {
@@ -394,44 +394,11 @@ p {
   color: rgba(244, 234, 223, 0.72);
 }
 
-.solution-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  margin-top: 34px;
-}
-
-.solution-card {
-  min-width: 0;
-  border: 1px solid var(--color-line);
-  background: #0a0908;
-}
-
-.solution-card img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  border-bottom: 1px solid var(--color-line);
-  filter: saturate(0.86) contrast(1.04) brightness(0.78);
-}
-
-.solution-card div {
-  padding: 26px;
-}
-
-.solution-card h3 {
-  font-size: clamp(1.35rem, 2vw, 1.65rem);
-}
-
-.solution-card p {
-  margin-top: 16px;
-}
-
 .projects__grid {
   display: grid;
-  grid-template-columns: 1.25fr 1fr;
-  gap: 28px;
-  margin-top: 28px;
+  grid-template-columns: minmax(0, 1.1fr) minmax(340px, 0.92fr);
+  gap: 24px;
+  margin-top: 30px;
 }
 
 .project {
@@ -443,8 +410,15 @@ p {
   overflow: hidden;
   padding: clamp(28px, 4vw, 44px);
   border: 1px solid var(--color-line);
-  background: #0c0b0a;
+  background: #0a0908;
   isolation: isolate;
+  text-decoration: none;
+  transition: border-color 160ms ease, transform 160ms ease;
+}
+
+.project:hover {
+  border-color: rgba(185, 138, 90, 0.52);
+  transform: translateY(-1px);
 }
 
 .project::before {
@@ -453,8 +427,9 @@ p {
   inset: 0;
   z-index: -2;
   background:
-    radial-gradient(circle at 72% 28%, rgba(185, 138, 90, 0.16), transparent 24rem),
-    linear-gradient(135deg, rgba(242, 233, 222, 0.04), transparent 42%);
+    linear-gradient(90deg, rgba(7, 7, 7, 0.86), rgba(7, 7, 7, 0.56) 54%, rgba(7, 7, 7, 0.18)),
+    url("assets/illustrations/document-flow.webp") center / cover no-repeat;
+  filter: saturate(0.8) contrast(1.08) brightness(0.74);
 }
 
 .project::after {
@@ -463,20 +438,18 @@ p {
   inset: 0;
   z-index: -1;
   background:
-    linear-gradient(90deg, rgba(7, 7, 7, 0.5), rgba(7, 7, 7, 0.08)),
-    repeating-linear-gradient(12deg, rgba(185, 138, 90, 0.08) 0 1px, transparent 1px 18px);
-  opacity: 0.55;
+    radial-gradient(circle at 80% 38%, rgba(185, 138, 90, 0.16), transparent 18rem),
+    linear-gradient(180deg, rgba(7, 7, 7, 0.02), rgba(7, 7, 7, 0.58));
+  opacity: 0.9;
 }
 
 .project--large {
-  min-height: 438px;
+  min-height: 456px;
 }
 
 .project--large h3 {
-  margin-top: 84px;
-  font-size: clamp(2.15rem, 4vw, 3.25rem);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  margin-top: 82px;
+  font-size: clamp(2.45rem, 4.4vw, 3.65rem);
 }
 
 .project--large p:not(.project__eyebrow) {
@@ -498,14 +471,14 @@ p {
 
 .project--system::before {
   background:
-    radial-gradient(circle at 80% 22%, rgba(93, 126, 122, 0.2), transparent 20rem),
-    linear-gradient(135deg, rgba(185, 138, 90, 0.08), transparent 50%);
+    linear-gradient(90deg, rgba(7, 7, 7, 0.84), rgba(7, 7, 7, 0.54) 56%, rgba(7, 7, 7, 0.2)),
+    url("assets/illustrations/compliance-flow.webp") center / cover no-repeat;
 }
 
 .project--shield::before {
   background:
-    radial-gradient(circle at 84% 45%, rgba(50, 111, 97, 0.18), transparent 18rem),
-    linear-gradient(135deg, rgba(185, 138, 90, 0.06), transparent 50%);
+    linear-gradient(90deg, rgba(7, 7, 7, 0.84), rgba(7, 7, 7, 0.54) 56%, rgba(7, 7, 7, 0.2)),
+    url("assets/illustrations/training-flow.webp") center / cover no-repeat;
 }
 
 .project h3 + p {
@@ -540,64 +513,6 @@ p {
   content: "•";
   margin-right: 16px;
   color: var(--color-bronze);
-}
-
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1px;
-  margin-top: 34px;
-  border: 1px solid var(--color-line);
-  background: var(--color-line);
-}
-
-.portfolio-card {
-  display: grid;
-  grid-template-columns: 52px minmax(0, 1fr);
-  gap: 18px;
-  min-height: 154px;
-  padding: 24px;
-  background: #090807;
-  text-decoration: none;
-  transition: background 160ms ease, transform 160ms ease;
-}
-
-.portfolio-card:hover {
-  background: #11100f;
-}
-
-.portfolio-logo {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 52px;
-  height: 52px;
-  border: 1px solid rgba(185, 138, 90, 0.46);
-  color: var(--color-bronze-hover);
-  font-family: var(--font-heading);
-  font-size: 1.15rem;
-  line-height: 1;
-}
-
-.portfolio-body {
-  display: flex;
-  min-width: 0;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.portfolio-body strong {
-  color: var(--color-ivory);
-  font-family: var(--font-heading);
-  font-size: 1.45rem;
-  font-weight: 500;
-  line-height: 1.1;
-}
-
-.portfolio-body span {
-  color: var(--color-soft-gray);
-  font-size: 0.95rem;
-  line-height: 1.55;
 }
 
 .section-head {
@@ -841,9 +756,7 @@ p {
   }
 
   .method__steps,
-  .solution-grid,
   .projects__grid,
-  .portfolio-grid,
   .journal__list,
   .about__inner,
   .blog-grid,
@@ -929,17 +842,6 @@ p {
   .project--large h3 {
     margin-top: 40px;
     font-size: 2.4rem;
-  }
-
-  .portfolio-card {
-    grid-template-columns: 44px minmax(0, 1fr);
-    gap: 14px;
-    padding: 20px;
-  }
-
-  .portfolio-logo {
-    width: 44px;
-    height: 44px;
   }
 
   .page-shell {
