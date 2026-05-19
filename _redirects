@@ -1,6 +1,11 @@
 /.screenshots/:splat* /__blocked__ 404!
 /.git/:splat* /__blocked__ 404!
 /.wrangler/:splat* /__blocked__ 404!
+/blog/innlegg/ki-gapet-i-norsk-naeringsliv.html /blog/innlegg/ki-gapet-i-norsk-naeringsliv 301!
+/blog/innlegg/arbeidskraftmangel-og-ki-potensial.html /blog/innlegg/arbeidskraftmangel-og-ki-potensial 301!
+/blog/innlegg/offentlig-sektor-ki-modenhet.html /blog/innlegg/offentlig-sektor-ki-modenhet 301!
+/blog/innlegg/ki-loven-risikokart.html /blog/innlegg/ki-loven-risikokart 301!
+/blog/innlegg/ki-mot-2045-arbeidskraftgapet.html /blog/innlegg/ki-mot-2045-arbeidskraftgapet 301!
 /blog/innlegg/norsk-arbeidsmarkedsoversikt.html /blog/innlegg/norsk-arbeidsmarkedsoversikt 301!
 /blog/innlegg/ki-anslag-og-sporsmal.html /blog/innlegg/ki-anslag-og-sporsmal 301!
 /blog/innlegg/reddit-ama-arbeidsmarked.html /blog/innlegg/reddit-ama-arbeidsmarked 301!

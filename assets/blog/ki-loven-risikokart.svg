@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#08090f"/><stop offset=".55" stop-color="#11131b"/><stop offset="1" stop-color="#050506"/></linearGradient>
+    <linearGradient id="ki-loven-risikokart-bar" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#d69b62"/><stop offset="1" stop-color="#f26d6d"/></linearGradient>
+    <radialGradient id="glow" cx="72%" cy="20%" r="62%"><stop stop-color="#d69b62" stop-opacity=".25"/><stop offset="1" stop-color="#d69b62" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <rect width="1200" height="900" fill="url(#glow)"/>
+  <g transform="translate(120 90)">
+    <text x="0" y="0" fill="#d69b62" font-family="Inter, Arial" font-size="18" font-weight="700" letter-spacing="3">TURMO.DEV ANALYSE</text>
+    <text x="0" y="74" fill="#f7f0e9" font-family="Georgia, serif" font-size="62">KI-loven i praksis</text>
+    <text x="0" y="122" fill="#a9b1c6" font-family="Inter, Arial" font-size="24">Norske data, praktisk KI og lesbare beslutningsgrafer.</text>
+  </g>
+  <g><line x1="80" y1="160" x2="820" y2="160" stroke="rgba(238,242,255,.10)"/><line x1="80" y1="240" x2="820" y2="240" stroke="rgba(238,242,255,.10)"/><line x1="80" y1="320" x2="820" y2="320" stroke="rgba(238,242,255,.10)"/><line x1="80" y1="400" x2="820" y2="400" stroke="rgba(238,242,255,.10)"/><line x1="80" y1="480" x2="820" y2="480" stroke="rgba(238,242,255,.10)"/><line x1="80" y1="560" x2="820" y2="560" stroke="rgba(238,242,255,.10)"/></g>
+  <g><rect x="110" y="500" width="72" height="60" rx="12" fill="url(#ki-loven-risikokart-bar)" opacity="0.82"/><circle cx="146" cy="500" r="7" fill="#f7f0e9" opacity="0.9"/><rect x="240" y="425" width="72" height="135" rx="12" fill="url(#ki-loven-risikokart-bar)" opacity="0.82"/><circle cx="276" cy="425" r="7" fill="#f7f0e9" opacity="0.9"/><rect x="370" y="356" width="72" height="204" rx="12" fill="url(#ki-loven-risikokart-bar)" opacity="0.82"/><circle cx="406" cy="356" r="7" fill="#f7f0e9" opacity="0.9"/><rect x="500" y="308" width="72" height="252" rx="12" fill="url(#ki-loven-risikokart-bar)" opacity="0.82"/><circle cx="536" cy="308" r="7" fill="#f7f0e9" opacity="0.9"/><rect x="630" y="380" width="72" height="180" rx="12" fill="url(#ki-loven-risikokart-bar)" opacity="0.82"/><circle cx="666" cy="380" r="7" fill="#f7f0e9" opacity="0.9"/></g>
+  <polyline points="146,500 276,425 406,356 536,308 666,380" fill="none" stroke="#f7f0e9" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity=".86"/>
+  <g opacity=".72">
+    <rect x="850" y="216" width="224" height="138" rx="18" fill="rgba(255,255,255,.055)" stroke="rgba(238,242,255,.14)"/>
+    <text x="884" y="272" fill="#f7f0e9" font-family="Inter, Arial" font-size="44" font-weight="700">84</text>
+    <text x="884" y="312" fill="#a9b1c6" font-family="Inter, Arial" font-size="18">indeks</text>
+    <rect x="850" y="388" width="224" height="138" rx="18" fill="rgba(255,255,255,.045)" stroke="rgba(238,242,255,.14)"/>
+    <text x="884" y="444" fill="#f26d6d" font-family="Inter, Arial" font-size="44" font-weight="700">5</text>
+    <text x="884" y="484" fill="#a9b1c6" font-family="Inter, Arial" font-size="18">datapunkter</text>
+  </g>
+</svg>

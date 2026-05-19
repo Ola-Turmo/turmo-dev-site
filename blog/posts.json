@@ -1,11 +1,75 @@
 [
   {
+    "title": "KI-gapet i norsk næringsliv",
+    "slug": "ki-gapet-i-norsk-naeringsliv",
+    "date": "2026-05-19",
+    "url": "/blog/innlegg/ki-gapet-i-norsk-naeringsliv",
+    "summary": "Hvor KI faktisk tas i bruk i norske virksomheter, og hvor gapet mellom potensial og drift er størst.",
+    "tags": [
+      "SSB",
+      "næringsliv",
+      "KI-adopsjon"
+    ]
+  },
+  {
+    "title": "Arbeidskraftmangel og KI-potensial",
+    "slug": "arbeidskraftmangel-og-ki-potensial",
+    "date": "2026-05-19",
+    "url": "/blog/innlegg/arbeidskraftmangel-og-ki-potensial",
+    "summary": "NAVs mangeldata koblet til en praktisk vurdering av hvor KI kan frigjøre tid i pressede yrker.",
+    "tags": [
+      "NAV",
+      "arbeidskraft",
+      "produktivitet"
+    ]
+  },
+  {
+    "title": "Offentlig sektor og KI-modenhet",
+    "slug": "offentlig-sektor-ki-modenhet",
+    "date": "2026-05-19",
+    "url": "/blog/innlegg/offentlig-sektor-ki-modenhet",
+    "summary": "Hvor offentlig sektor er moden for KI, og hvilke kontrollpunkter som må på plass før produksjon.",
+    "tags": [
+      "offentlig sektor",
+      "Digdir",
+      "KS"
+    ]
+  },
+  {
+    "title": "KI-loven som praktisk risikokart",
+    "slug": "ki-loven-risikokart",
+    "date": "2026-05-19",
+    "url": "/blog/innlegg/ki-loven-risikokart",
+    "summary": "AI Act forklart som praktisk beslutningskart for norske virksomheter, ikke som juridisk tåke.",
+    "tags": [
+      "AI Act",
+      "Nkom",
+      "Datatilsynet"
+    ]
+  },
+  {
+    "title": "KI mot 2045: arbeidskraftgapet",
+    "slug": "ki-mot-2045-arbeidskraftgapet",
+    "date": "2026-05-19",
+    "url": "/blog/innlegg/ki-mot-2045-arbeidskraftgapet",
+    "summary": "Tre norske scenarioer for KI, produktivitet og kapasitet mot 2045.",
+    "tags": [
+      "scenario",
+      "2045",
+      "produktivitet"
+    ]
+  },
+  {
     "title": "Norsk arbeidsmarkedsoversikt",
     "slug": "norsk-arbeidsmarkedsoversikt",
     "date": "2026-05-07",
     "url": "/blog/innlegg/norsk-arbeidsmarkedsoversikt",
     "summary": "Interaktivt treemap over norske yrker, bygget på SSB-data og STYRK-klassifikasjonen.",
-    "tags": ["SSB", "arbeidsmarked", "KI"]
+    "tags": [
+      "SSB",
+      "arbeidsmarked",
+      "KI"
+    ]
   },
   {
     "title": "KI-påvirkning i norske yrker",
@@ -13,7 +77,11 @@
     "date": "2026-05-07",
     "url": "/blog/innlegg/ki-anslag-og-sporsmal",
     "summary": "Radarplot og tabell som viser teoretisk LLM-eksponering mot anslått KI-bruk i norske yrkesgrupper.",
-    "tags": ["KI", "arbeidsliv", "analyse"]
+    "tags": [
+      "KI",
+      "arbeidsliv",
+      "analyse"
+    ]
   },
   {
     "title": "Tidslinje for ledende modeller",
@@ -21,6 +89,10 @@
     "date": "2026-05-07",
     "url": "/blog/innlegg/reddit-ama-arbeidsmarked",
     "summary": "Benchmark-graf for frontmodeller på ARC-AGI-2, HLE, HLE-Verified og GPQA Diamond.",
-    "tags": ["benchmark", "modeller", "KI"]
+    "tags": [
+      "benchmark",
+      "modeller",
+      "KI"
+    ]
   }
 ]
