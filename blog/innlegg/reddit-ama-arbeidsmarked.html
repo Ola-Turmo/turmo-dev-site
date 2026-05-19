@@ -1876,7 +1876,7 @@ body.article-benchmark .benchmark-shell {
   <div class="article-shell-inner">
     <a class="article-brand" href="/" aria-label="turmo.dev forsiden">
       <span class="article-brand-name">turmo.dev</span>
-      <span class="article-brand-sub">The Executive</span>
+      <span class="article-brand-sub">KI som tåler norsk hverdag</span>
     </a>
     <nav class="article-nav" aria-label="Hovedmeny">
       <a href="/#tjenester">Tjenester</a>
@@ -1965,7 +1965,7 @@ Svar kun med JSON:
     <details>
       <summary>Metode og kilder</summary>
       <div class="drawer-panel">
-        <p><strong>Kort fortalt:</strong> SSB er hovedkilden i denne versjonen. Når det ikke finnes en direkte tabell på samme detaljeringsnivå, viser vi en avledet indikator og forklarer hvordan vi har laget den.</p>
+        <p><strong>Kort fortalt:</strong> SSB er hovedkilden i denne versjonen. Når det ikke finnes en direkte tabell på samme detaljeringsnivå, viser jeg en avledet indikator og forklarer hvordan jeg har laget den.</p>
 
         <h2>Datagrunnlag</h2>
         <ul>
@@ -1991,7 +1991,7 @@ Svar kun med JSON:
         <ul>
           <li>Ledighetskontekst er ikke et direkte yrkesspesifikt ledighetstall.</li>
           <li>Visualiseringen er laget for utforsking av offisielle data. Den er ikke en sanntids jobbportal.</li>
-          <li>Når SSB ikke publiserer et mål på samme detaljeringsnivå som de andre lagene, bruker vi den tydeligste offisielle løsningen vi har.</li>
+          <li>Når SSB ikke publiserer et mål på samme detaljeringsnivå som de andre lagene, bruker jeg den tydeligste offisielle løsningen jeg har.</li>
         </ul>
 
         <h2>Repo-historikk</h2>
@@ -2005,9 +2005,9 @@ Svar kun med JSON:
         <ul>
           <li><strong>Ikke amerikanske nivåer:</strong> Areal, lønn og endring i hovedkartet bygger på norske SSB-kilder. Det som er arvet fra originalen, er først og fremst visualiseringsformen og repo-strukturen.</li>
           <li><strong>Endring er historikk, ikke prognose:</strong> Laget «Endring» viser utvikling siden 2019 i norske data. Det er ikke en norsk variant av BLS Outlook.</li>
-          <li><strong>Utdanning arves noen ganger fra et høyere nivå:</strong> På detaljert firesifret yrkesnivå finnes ikke alle SSB-mål i samme oppløsning. Da henter vi utdanningsprofil fra nærmeste offisielle overnivå.</li>
+          <li><strong>Utdanning arves noen ganger fra et høyere nivå:</strong> På detaljert firesifret yrkesnivå finnes ikke alle SSB-mål i samme oppløsning. Da henter jeg utdanningsprofil fra nærmeste offisielle overnivå.</li>
           <li><strong>KI-påvirkning er modellert:</strong> Dette laget bygger på et norsk LLM-anslag og skal leses som et anslag for hvor sterkt arbeidsinnholdet kan bli påvirket, ikke som et direkte mål på faktisk bruk eller automatisering.</li>
-          <li><strong>Ledighetskontekst er avledet:</strong> Dette er ikke et direkte yrkesspesifikt ledighetstall. Vi kombinerer offisiell næringsmiks for yrkesgrupper med SSBs tall for ledige stillinger per næring.</li>
+          <li><strong>Ledighetskontekst er avledet:</strong> Dette er ikke et direkte yrkesspesifikt ledighetstall. Jeg kombinerer offisiell næringsmiks for yrkesgrupper med SSBs tall for ledige stillinger per næring.</li>
           <li><strong>Noen små yrker må tolkes varsomt:</strong> Enkelte firesifrede yrker har svært få sysselsatte. De vises fordi de finnes i tabellen, men tallene kan være skjøre.</li>
         </ul>
       </div>
@@ -2080,7 +2080,7 @@ Svar kun med JSON:
 
 <section class="analysis-section" id="aiImpactSection">
   <h2>KI-påvirkning i norske yrker</h2>
-  <p class="section-lead">Anthropic viser i <a href="https://www.anthropic.com/research/labor-market-impacts">Labor market impacts of AI</a> at det ofte er stor avstand mellom hva KI kan brukes til i teorien og hva som faktisk tas i bruk. Her viser vi en norsk variant: Den blå flaten viser teoretisk LLM-eksponering per yrkesgruppe. Den røde flaten viser et anslag for bruk, basert på SSBs KI-statistikk etter næring og yrkesfordelingen i datasettet.</p>
+  <p class="section-lead">Anthropic viser i <a href="https://www.anthropic.com/research/labor-market-impacts">Labor market impacts of AI</a> at det ofte er stor avstand mellom hva KI kan brukes til i teorien og hva som faktisk tas i bruk. Her viser jeg en norsk variant: Den blå flaten viser teoretisk LLM-eksponering per yrkesgruppe. Den røde flaten viser et anslag for bruk, basert på SSBs KI-statistikk etter næring og yrkesfordelingen i datasettet.</p>
   <details>
     <summary>Datakvalitet i KI-seksjonen</summary>
     <div class="drawer-panel">
@@ -2090,7 +2090,7 @@ Svar kun med JSON:
         <li><strong>Norske grupper og norske volum:</strong> Etiketter, sysselsettingstall og eksemplene i høyrepanelet kommer fortsatt fra dette norske datasettet, ikke fra USA.</li>
         <li><strong>Blå serie er fortsatt tolket:</strong> «Teoretisk LLM-eksponering» er ikke offisiell norsk statistikk. Det er et modellert anslag, justert mot Anthropic sin bredere yrkesprofil.</li>
         <li><strong>Rød serie er fortsatt ikke yrkestelemetri:</strong> «Anslått bruk» bygger ikke på direkte målt KI-bruk per norsk yrke. Den er kalibrert ut fra Anthropic sin figur og koblet til norske grupper for å gi riktigere størrelsesforhold mellom kategoriene.</li>
-        <li><strong>Mangler norsk yrkestelemetri:</strong> Vi har ikke et norsk motstykke til Anthropic Economic Index på yrkesnivå. Derfor bør denne seksjonen leses som en tidlig indikasjon, ikke som en fasit.</li>
+        <li><strong>Mangler norsk yrkestelemetri:</strong> Jeg har ikke et norsk motstykke til Anthropic Economic Index på yrkesnivå. Derfor bør denne seksjonen leses som en tidlig indikasjon, ikke som en fasit.</li>
         <li><strong>Best til sammenligning mellom grupper:</strong> Figuren er mest nyttig når du vil se relative forskjeller mellom brede norske yrkesgrupper, ikke tolke hvert enkelt prosentpoeng bokstavelig.</li>
       </ul>
     </div>
@@ -2262,9 +2262,9 @@ Svar kun med JSON:
   <div class="article-shell-inner article-footer-main">
     <a class="article-brand" href="/" aria-label="turmo.dev forsiden">
       <span class="article-brand-name">turmo.dev</span>
-      <span class="article-brand-sub">The Executive</span>
+      <span class="article-brand-sub">KI som tåler norsk hverdag</span>
     </a>
-    <p>Vi integrerer KI.<br>Du skaper verdien.</p>
+    <p>Jeg integrerer KI.<br>Du skaper verdien.</p>
     <div class="article-footer-links" aria-label="Sosiale lenker">
       <a href="https://www.linkedin.com/" rel="noopener">LinkedIn</a>
       <a href="https://x.com/" rel="noopener">X</a>
@@ -2341,8 +2341,8 @@ const THINKING_BANNER_CONTENT = {
     text: "Tallene viser at det er godt betalte kontoryrker som står foran den største omstillingen.",
   },
   aiImpactSection: {
-    title: "Hvor stor del av eksisterende KI har vi tatt i bruk?",
-    text: "Tallene viser at vi bare utnytter en liten del.",
+    title: "Hvor stor del av eksisterende KI har jeg tatt i bruk?",
+    text: "Tallene viser at jeg bare utnytter en liten del.",
   },
   benchmarkSection: {
     title: "Hvorfor er benchmarkene viktige?",
@@ -3070,7 +3070,7 @@ function renderImpactFocus(category) {
   if (category.gap_pct_points >= 35) {
     description = "Her er avstanden stor mellom hva dagens språkmodeller kan bidra med i teorien og hva som ser ut til å være tatt i bruk i norsk arbeidsliv.";
   } else if (category.gap_pct_points >= 22) {
-    description = "Her ser vi tydelig mer teoretisk potensial enn bruk så langt.";
+    description = "Her ser jeg tydelig mer teoretisk potensial enn bruk så langt.";
   }
   if (category.source_equivalent) {
     description += ` Nivået er kalibrert mot Anthropic-kategorien «${category.source_equivalent}».`;
